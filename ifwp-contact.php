@@ -10,7 +10,7 @@
  * Plugin Name: IFWP Contact
  * Plugin URI: https://github.com/ifwp/ifwp-contact
  * Text Domain: ifwp-contact
- * Version: 3.8.27
+ * Version: 4.7.24
  */
  // ----------------------------------------------------------------------------------------------------
 
@@ -1003,7 +1003,7 @@
 					'html_name' => '',
 					'html_class' => '',
 					'output' => 'form'
-				), $atts);
+				), $atts, 'wpcf7');
 				$id = (int) $atts['id'];
 				$title = trim($atts['title']);
 				if(!$contact_form = wpcf7_contact_form($id)){
@@ -1175,8 +1175,10 @@
 					}
 					if(!empty($data['uploaded_files'])){
 						foreach($data['uploaded_files'] as $key => $value){
-							$attachment_id = self::move_file($value, $post_id);
-							update_post_meta($post_id, 'uploaded_files_' . $key, $attachment_id);
+							foreach((array) $value as $single){
+								$attachment_id = self::move_file($single, $post_id);
+								update_post_meta($post_id, 'uploaded_files_' . $key, $attachment_id);
+							}
 						}
 					}
 					do_action('ifwp_save_contact', $post_id, $post, $update);

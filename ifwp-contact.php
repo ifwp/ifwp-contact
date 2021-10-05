@@ -10,7 +10,7 @@
  * Plugin Name: IFWP Contact
  * Plugin URI: https://github.com/ifwp/ifwp-contact
  * Text Domain: ifwp-contact
- * Version: 4.7.24
+ * Version: 4.10.5
  */
  // ----------------------------------------------------------------------------------------------------
 
@@ -1139,9 +1139,10 @@
 				} else {
 					$update = false;
 					$post_id = wp_insert_post(array(
+						'post_name' => sprintf('contact-form-7-id-%1$d-title-%2$s-uniqid-%3$s', $data['wpcf7']['ID'], $data['contact_form']['title'], $data['ifwp']['uniqid']),
 						'post_status' => 'private',
-						'post_title' => sprintf('[contact-form-7 id="%1$d" title="%2$s"]', $data['wpcf7']['ID'], $data['contact_form']['title']),
-						'post_type' => 'ifwp_saved_contact'
+						'post_title' => sprintf('[contact-form-7 id="%1$d" title="%2$s" uniqid="%3$s"]', $data['wpcf7']['ID'], $data['contact_form']['title'], $data['ifwp']['uniqid']),
+						'post_type' => 'ifwp_saved_contact',
 					));
 					if($post_id){
 						if(is_wp_error($post_id)){

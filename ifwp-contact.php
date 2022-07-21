@@ -10,7 +10,7 @@
  * Plugin Name: IFWP Contact
  * Plugin URI: https://github.com/ifwp/ifwp-contact
  * Text Domain: ifwp-contact
- * Version: 4.10.5
+ * Version: 5.7.21
  */
  // ----------------------------------------------------------------------------------------------------
 

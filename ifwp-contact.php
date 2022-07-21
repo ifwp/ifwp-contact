@@ -1197,8 +1197,8 @@
 
  // ----------------------------------------------------------------------------------------------------
 
- 	if(!class_exists('IFWP')){
-		class IFWP {
+ 	if(!class_exists('IFWP_Backcompat')){
+		class IFWP_Backcompat {
 			private $class_name = '';
 			public function __construct($class_name = ''){
 				$this->class_name = $class_name;
@@ -1216,7 +1216,7 @@
 		function ifwp($class_name = ''){
 			$class_name = 'ifwp_' . str_replace('-', '_', sanitize_title($class_name));
 			if(class_exists($class_name)){
-				return new IFWP($class_name);
+				return new IFWP_Backcompat($class_name);
 			} else {
 				return null;
 			}

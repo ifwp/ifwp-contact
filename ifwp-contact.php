@@ -1,16 +1,16 @@
 <?php
 /**
- * Author: Luis del Cid
- * Author URI: http://luisdelcid.com
- * Description: Improvements and Fixes for Contact Form 7...
- * Domain Path:
- * License: GPL2
- * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Network:
  * Plugin Name: IFWP Contact
  * Plugin URI: https://github.com/ifwp/ifwp-contact
+ * Description: Improvements and Fixes for Contact Form 7.
+ * Version: 6.5.22
+ * Requires at least: 5.0
+ * Requires PHP: 5.6
+ * Author: Luis del Cid
+ * Author URI: http://luisdelcid.com
+ * License: GPL2
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: ifwp-contact
- * Version: 5.7.21
  */
  // ----------------------------------------------------------------------------------------------------
 
@@ -731,8 +731,8 @@
 	 // ------------------------------------------------------------------------------------------------
 
 	 	private static function check_for_updates(){
-			require_once(plugin_dir_path( __FILE__ ) . 'plugin-update-checker-4.9/plugin-update-checker.php');
-			Puc_v4_Factory::buildUpdateChecker('https://github.com/ifwp/ifwp-contact', __FILE__, 'ifwp-contact');
+			require_once(plugin_dir_path( __FILE__ ) . 'plugin-update-checker-5.6/plugin-update-checker.php');
+			YahnisElsts\PluginUpdateChecker\v5p6\PucFactory::buildUpdateChecker('https://github.com/ifwp/ifwp-contact', __FILE__, 'ifwp-contact');
 		}
 
 	 // ------------------------------------------------------------------------------------------------

@@ -403,7 +403,7 @@
 			add_filter('wpcf7_form_elements', array(__CLASS__, 'wpcf7_form_elements__filter'));
 			add_filter('wpcf7_form_elements', 'do_shortcode', 20);
 			add_filter('wpcf7_form_hidden_fields', array(__CLASS__, 'wpcf7_form_hidden_fields__filter'));
-			add_filter('wpcf7_form_tag_data_option', array(__CLASS__, 'wpcf7_form_tag_data_option__filter'), 10, 2);
+			add_filter('wpcf7_form_tag_data_option', array(__CLASS__, 'wpcf7_form_tag_data_option__filter'), 11, 2); // Fix for Conditional Fields PRO.
 			add_filter('wpcf7_special_mail_tags', array(__CLASS__, 'wpcf7_special_mail_tags__filter'), 10, 3);
 			add_filter('wpcf7_verify_nonce', array(__CLASS__, 'wpcf7_verify_nonce__filter'));
 		}

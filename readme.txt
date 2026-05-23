@@ -1,5 +1,5 @@
 === IFWP Contact ===
-Contributors: @ifwp
+Contributors: ifwp
 Donate link: http://luisdelcid.com
 Tags: ifwp, contact
 Requires at least: 5.0

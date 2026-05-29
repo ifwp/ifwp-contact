@@ -3,7 +3,7 @@
  * Plugin Name: IFWP Contact
  * Plugin URI: https://github.com/ifwp/ifwp-contact
  * Description: Improvements and Fixes for Contact Form 7.
- * Version: 6.5.22
+ * Version: 6.5.26
  * Requires at least: 5.0
  * Requires PHP: 5.6
  * Author: Luis del Cid
